@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+:root {
+  --colorBg: #111;
+  --colorBgEmphasis: #232323;
+  --colorTxt: #f2f2f2;
+  --colorEmphasis: #1774bb;
+  --colorEmphasis1: #de1e1e;
+  --colorEmphasis2: #17bb1c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'MuseoModerno', cursive;
+  letter-spacing: 0px;
+
+}
+
+.--txt-emphasis * {
+  font-family: 'Bad Script', cursive;
+}
+
+#root {
+  min-height: 100vh;
+  background: var(--colorBg);
+  color: var(--colorTxt);
+}
+
+::selection {
+  background-color: var(--colorEmphasis);
+
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--colorBgEmphasis);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--colorEmphasis);
+  border-radius: 30px;
+}
