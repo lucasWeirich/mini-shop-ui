@@ -6,12 +6,12 @@ export const Wrapper = styled(Link)`
   border-radius: 10px;
   padding: 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  //justify-content: space-between;
+  //gap: 20px;
   text-decoration: none;
   color: var(--colorTxt);
   align-items: center;
-  flex-direction: column;
-  gap: 20px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s;
@@ -33,7 +33,7 @@ export const Wrapper = styled(Link)`
 
   &::after {
     background-color: var(--colorEmphasis2);
-    bottom: -20px;
+    bottom: -40px;
     left: -30px;
   }
 
@@ -51,8 +51,8 @@ export const Wrapper = styled(Link)`
       height: 300px;
     }
     &::after {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
     }
 
     & img {
@@ -74,6 +74,7 @@ export const Title = styled.h3`
 `
 
 export const Img = styled.img`
+  width: 100%;
   border-radius: 10px;
   transition: all 0.3s;
 `
@@ -83,6 +84,7 @@ export const Buttons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto;
 `
 
 export const Price = styled.span`
@@ -98,7 +100,7 @@ export const Price = styled.span`
 export const AddToCart = styled.button<{
   active: boolean
 }>`
-  width: 60%;
+  min-width: 60%;
   height: 35px;
   display: flex;
   justify-content: center;

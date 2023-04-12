@@ -12,9 +12,8 @@ export default function Header() {
 
       <H.Menu>
         <ul>
-          <li><Link to='/'>Sport</Link></li>
-          <li><Link to='/'>Social</Link></li>
-          <li><Link to='/'>Tênis</Link></li>
+          <li><Link to='/Promocoes'>Pesquisar</Link></li>
+          <li><Link to='/'>Todos os Tênis</Link></li>
           
           <li>
             <Link to='/cart' className='--icon' >

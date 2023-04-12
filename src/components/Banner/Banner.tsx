@@ -43,13 +43,22 @@ const Wrapper = styled.div`
   position: relative;
 
   & img {
+    display: flex;
+    max-width: 1400px;
     width: 100%;
     height: 550px;
     object-fit: cover;
+    margin: 0 auto;
   }
 
   & .swiper-pagination-bullet {
     background-color: var(--colorTxt);
+  }
+
+  @media (max-width: 1400px) {
+    & img {
+      height: 450px;
+    }
   }
 
   @media (max-width: 1200px) {

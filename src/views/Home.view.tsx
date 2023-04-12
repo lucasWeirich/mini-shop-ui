@@ -10,14 +10,16 @@ export default function Home() {
 
   return <LayoutDefault>
 
-    {/* <Banner banners={bannersHome} /> */}
+    <Banner banners={bannersHome} />
 
     <Container>
       <DisplayProducts
         title="Destaques"
+        category="destaque"
       />
       <DisplayProducts
         title="Promoções"
+        category="promo"
       />
 
     </Container>

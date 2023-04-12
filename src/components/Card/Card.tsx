@@ -4,26 +4,31 @@ import { mdiCartArrowDown } from '@mdi/js';
 import { useState } from 'react';
 
 interface CardProps {
-
+  product: {
+    id: number,
+    name: string,
+    price: number,
+  }
 }
 
-export default function Card({ }: CardProps) {
+export default function Card({ product }: CardProps) {
 
-  const [inTheCart, setInTheCart] = useState(true)
+  const [inTheCart, setInTheCart] = useState(false)
 
-  function handleClickAddToCard() {
+  function handleClickAddToCard(id: number) {
+    console.log(id)
     setInTheCart(!inTheCart)
   }
 
   return <C.Wrapper to='/'>
-    <C.Title>Product 01</C.Title>
-    <C.Img src="productTest.png" alt="" />
+    <C.Title>{product.name}</C.Title>
+    <C.Img src={`products/${product.id}/capa.png`} alt={product.name} />
 
     <C.Buttons>
-      <C.Price>$ 90.8</C.Price>
+      <C.Price>$ {product.price.toLocaleString("pt-BR")}</C.Price>
       <C.AddToCart
         active={inTheCart}
-        onClick={handleClickAddToCard}
+        onClick={() => handleClickAddToCard(product.id)}
       >
         <Icon
           path={mdiCartArrowDown}
