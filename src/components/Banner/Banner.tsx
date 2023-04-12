@@ -44,7 +44,7 @@ const Wrapper = styled.div`
 
   & img {
     display: flex;
-    max-width: 1400px;
+   /*  max-width: 1400px; */
     width: 100%;
     height: 550px;
     object-fit: cover;

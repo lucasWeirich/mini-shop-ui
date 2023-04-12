@@ -24,7 +24,6 @@ const Title = styled.h1`
   align-items: center;
   gap: 30px;
 
-
   & svg path {
     transition: all 0.5s;
   }
@@ -35,4 +34,11 @@ const Title = styled.h1`
     }
   }
 
+  @media (max-width: 1200px) {
+    font-size: 30px;
+  }
+  @media (max-width: 600px) {
+    font-size: 25px;
+    gap: 20px;
+  }
 `

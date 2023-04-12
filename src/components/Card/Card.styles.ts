@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const Wrapper = styled(Link)`
+export const Wrapper = styled.div`
   background-color: var(--colorBgEmphasis);
   border-radius: 10px;
   padding: 20px;

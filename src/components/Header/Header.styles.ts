@@ -93,6 +93,46 @@ export const Menu = styled.nav`
             }
           }
         }
+
+        &.--cart {
+          position: relative;
+
+          &:hover {
+            & span {
+              background-color: var(--colorEmphasis2);
+              top: -10px;
+            }
+          }
+          
+          & span {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var(--colorEmphasis);
+            font-size: 10px;
+            position: absolute;
+            top: -5px;
+            right: 0;
+            z-index: 999;
+            transition: all 0.3s;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    & ul {
+      gap: 5px;
+      flex-wrap: wrap;
+      justify-content: end;
+      
+      & a {
+        font-size: 14px;
+        padding: 2px;
       }
     }
   }
